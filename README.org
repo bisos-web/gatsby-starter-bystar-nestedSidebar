@@ -420,3 +420,8 @@ Built with Gatsby 5, React 18, Tailwind CSS v3, Lunr.js search, and comprehensiv
   *Built for ByStar and the Libre-Halaal Digital Ecosystem*
 
   Privacy. Autonomy. Transparency. All built-in.
+
+
+# Local Variables:
+# eval: (setq-local toc-org-max-depth 4)
+# End:
