@@ -66,124 +66,108 @@ export default function EmbeddedServicesPage() {
       <p>
         The <code>EmbeddedContent</code> component accepts the following props:
       </p>
-      <table
-        style={{
-          width: "100%",
-          borderCollapse: "collapse",
-          marginTop: "1rem",
-          marginBottom: "1rem",
-        }}
-      >
+      <table className="w-full border-collapse my-4">
         <thead>
-          <tr style={{ backgroundColor: "#f3f4f6", borderBottom: "2px solid #d1d5db" }}>
-            <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>
+          <tr className="bg-gray-100 border-b-2 border-gray-300">
+            <th className="px-3 py-3 text-left font-bold">
               Prop
             </th>
-            <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>
+            <th className="px-3 py-3 text-left font-bold">
               Type
             </th>
-            <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>
+            <th className="px-3 py-3 text-left font-bold">
               Default
             </th>
-            <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>
+            <th className="px-3 py-3 text-left font-bold">
               Description
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">
               <code>url</code>
             </td>
-            <td style={{ padding: "0.75rem" }}>string</td>
-            <td style={{ padding: "0.75rem" }}>required</td>
-            <td style={{ padding: "0.75rem" }}>The URL to embed</td>
+            <td className="px-3 py-3">string</td>
+            <td className="px-3 py-3">required</td>
+            <td className="px-3 py-3">The URL to embed</td>
           </tr>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">
               <code>title</code>
             </td>
-            <td style={{ padding: "0.75rem" }}>string</td>
-            <td style={{ padding: "0.75rem" }}>"Embedded Content"</td>
-            <td style={{ padding: "0.75rem" }}>Accessible title for the iframe</td>
+            <td className="px-3 py-3">string</td>
+            <td className="px-3 py-3">"Embedded Content"</td>
+            <td className="px-3 py-3">Accessible title for the iframe</td>
           </tr>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">
               <code>aspectRatio</code>
             </td>
-            <td style={{ padding: "0.75rem" }}>string</td>
-            <td style={{ padding: "0.75rem" }}>"16:9"</td>
-            <td style={{ padding: "0.75rem" }}>
+            <td className="px-3 py-3">string</td>
+            <td className="px-3 py-3">"16:9"</td>
+            <td className="px-3 py-3">
               "16:9", "4:3", "1:1", or "auto"
             </td>
           </tr>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">
               <code>minHeight</code>
             </td>
-            <td style={{ padding: "0.75rem" }}>string</td>
-            <td style={{ padding: "0.75rem" }}>"600px"</td>
-            <td style={{ padding: "0.75rem" }}>
+            <td className="px-3 py-3">string</td>
+            <td className="px-3 py-3">"600px"</td>
+            <td className="px-3 py-3">
               Minimum height when <code>aspectRatio="auto"</code>
             </td>
           </tr>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">
               <code>border</code>
             </td>
-            <td style={{ padding: "0.75rem" }}>boolean</td>
-            <td style={{ padding: "0.75rem" }}>true</td>
-            <td style={{ padding: "0.75rem" }}>Show border around iframe</td>
+            <td className="px-3 py-3">boolean</td>
+            <td className="px-3 py-3">true</td>
+            <td className="px-3 py-3">Show border around iframe</td>
           </tr>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">
               <code>sandbox</code>
             </td>
-            <td style={{ padding: "0.75rem" }}>string</td>
-            <td style={{ padding: "0.75rem" }}>
+            <td className="px-3 py-3">string</td>
+            <td className="px-3 py-3">
               "allow-same-origin allow-scripts allow-popups allow-forms"
             </td>
-            <td style={{ padding: "0.75rem" }}>iframe sandbox attributes for security</td>
+            <td className="px-3 py-3">iframe sandbox attributes for security</td>
           </tr>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">
               <code>allowFullscreen</code>
             </td>
-            <td style={{ padding: "0.75rem" }}>boolean</td>
-            <td style={{ padding: "0.75rem" }}>false</td>
-            <td style={{ padding: "0.75rem" }}>Allow fullscreen mode</td>
+            <td className="px-3 py-3">boolean</td>
+            <td className="px-3 py-3">false</td>
+            <td className="px-3 py-3">Allow fullscreen mode</td>
           </tr>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">
               <code>loading</code>
             </td>
-            <td style={{ padding: "0.75rem" }}>string</td>
-            <td style={{ padding: "0.75rem" }}>"lazy"</td>
-            <td style={{ padding: "0.75rem" }}>"lazy" or "eager"</td>
+            <td className="px-3 py-3">string</td>
+            <td className="px-3 py-3">"lazy"</td>
+            <td className="px-3 py-3">"lazy" or "eager"</td>
           </tr>
           <tr>
-            <td style={{ padding: "0.75rem" }}>
+            <td className="px-3 py-3">
               <code>showLoadingMessage</code>
             </td>
-            <td style={{ padding: "0.75rem" }}>boolean</td>
-            <td style={{ padding: "0.75rem" }}>true</td>
-            <td style={{ padding: "0.75rem" }}>Show "Loading content..." message</td>
+            <td className="px-3 py-3">boolean</td>
+            <td className="px-3 py-3">true</td>
+            <td className="px-3 py-3">Show "Loading content..." message</td>
           </tr>
         </tbody>
       </table>
 
       <h2>Security Considerations</h2>
-      <div
-        style={{
-          backgroundColor: "#f0fdf4",
-          border: "1px solid #86efac",
-          borderRadius: "4px",
-          padding: "1rem",
-          marginTop: "1rem",
-          marginBottom: "1rem",
-        }}
-      >
-        <h3 style={{ marginTop: 0 }}>Sandbox Restrictions</h3>
+      <div className="bg-green-50 border border-green-300 rounded p-4 my-4">
+        <h3 className="mt-0">Sandbox Restrictions</h3>
         <p>
           By default, the component uses iframe sandbox attributes to restrict what the embedded
           content can do for security reasons. The default allows:
@@ -236,16 +220,7 @@ export default function EmbeddedServicesPage() {
       </p>
 
       <h3>Basic External Website</h3>
-      <pre
-        style={{
-          backgroundColor: "#1f2937",
-          color: "#e5e7eb",
-          padding: "1rem",
-          borderRadius: "4px",
-          overflow: "auto",
-          fontSize: "0.85rem",
-        }}
-      >
+      <pre className="bg-gray-900 text-gray-300 p-4 rounded overflow-auto text-xs">
         {`import EmbeddedContent from "../../components/EmbeddedContent"
 import Layout from "../../components/Layout"
 
@@ -262,16 +237,7 @@ export default function MyPage() {
       </pre>
 
       <h3>Internal Dashboard with Auto Height</h3>
-      <pre
-        style={{
-          backgroundColor: "#1f2937",
-          color: "#e5e7eb",
-          padding: "1rem",
-          borderRadius: "4px",
-          overflow: "auto",
-          fontSize: "0.85rem",
-        }}
-      >
+      <pre className="bg-gray-900 text-gray-300 p-4 rounded overflow-auto text-xs">
         {`<Layout showHeader={false} showSidebar={false} showFooter={false}>
   <EmbeddedContent
     url="http://localhost:3000/dashboard"
@@ -283,16 +249,7 @@ export default function MyPage() {
       </pre>
 
       <h3>Fullscreen Video Content</h3>
-      <pre
-        style={{
-          backgroundColor: "#1f2937",
-          color: "#e5e7eb",
-          padding: "1rem",
-          borderRadius: "4px",
-          overflow: "auto",
-          fontSize: "0.85rem",
-        }}
-      >
+      <pre className="bg-gray-900 text-gray-300 p-4 rounded overflow-auto text-xs">
         {`<Layout showHeader={false} showSidebar={false} showFooter={false}>
   <EmbeddedContent
     url="https://www.youtube.com/embed/dQw4w9WgXcQ"

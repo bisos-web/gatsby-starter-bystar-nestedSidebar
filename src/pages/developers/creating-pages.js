@@ -20,18 +20,7 @@ export default function CreatingPagesPage() {
         Edit <code>src/data/menuData.js</code> and add your page to the menu hierarchy:
       </p>
 
-      <pre
-        style={{
-          backgroundColor: "#1f2937",
-          color: "#e5e7eb",
-          padding: "1rem",
-          borderRadius: "4px",
-          overflow: "auto",
-          fontSize: "0.85rem",
-          marginTop: "1rem",
-          marginBottom: "1rem",
-        }}
-      >
+      <pre className="bg-gray-900 text-gray-300 p-4 rounded overflow-auto text-xs my-4">
         {`export const menuData = [
   // ... existing items ...
   {
@@ -54,13 +43,13 @@ export default function CreatingPagesPage() {
       <ul>
         <li>
           <strong>Top-Level Page:</strong>
-          <pre style={{ backgroundColor: "#f3f4f6", padding: "0.5rem", borderRadius: "4px", fontSize: "0.9rem" }}>
+          <pre className="bg-gray-100 p-2 rounded text-sm">
             {`{ label: "Contact", path: "/contact" }`}
           </pre>
         </li>
         <li>
           <strong>Nested Child Page:</strong>
-          <pre style={{ backgroundColor: "#f3f4f6", padding: "0.5rem", borderRadius: "4px", fontSize: "0.9rem" }}>
+          <pre className="bg-gray-100 p-2 rounded text-sm">
             {`{
   label: "About",
   path: "/about",
@@ -73,7 +62,7 @@ export default function CreatingPagesPage() {
         </li>
         <li>
           <strong>Deeply Nested (up to 5 levels):</strong>
-          <pre style={{ backgroundColor: "#f3f4f6", padding: "0.5rem", borderRadius: "4px", fontSize: "0.9rem" }}>
+          <pre className="bg-gray-100 p-2 rounded text-sm">
             {`{
   label: "Docs",
   path: "/docs",
@@ -100,18 +89,7 @@ export default function CreatingPagesPage() {
         Create a new file at <code>src/pages/my-page.js</code> (or the appropriate nested directory):
       </p>
 
-      <pre
-        style={{
-          backgroundColor: "#1f2937",
-          color: "#e5e7eb",
-          padding: "1rem",
-          borderRadius: "4px",
-          overflow: "auto",
-          fontSize: "0.85rem",
-          marginTop: "1rem",
-          marginBottom: "1rem",
-        }}
-      >
+      <pre className="bg-gray-900 text-gray-300 p-4 rounded overflow-auto text-xs my-4">
         {`import * as React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/seo"
@@ -132,40 +110,33 @@ export const Head = () => <Seo title="My Page" />`}
 
       <p>The Layout component supports these props to customize visibility:</p>
 
-      <table
-        style={{
-          width: "100%",
-          borderCollapse: "collapse",
-          marginTop: "1rem",
-          marginBottom: "1rem",
-        }}
-      >
+      <table className="w-full border-collapse my-4">
         <thead>
-          <tr style={{ backgroundColor: "#f3f4f6", borderBottom: "2px solid #d1d5db" }}>
-            <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>Prop</th>
-            <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>Type</th>
-            <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>Default</th>
-            <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>Description</th>
+          <tr className="bg-gray-100 border-b-2 border-gray-300">
+            <th className="px-3 py-3 text-left font-bold">Prop</th>
+            <th className="px-3 py-3 text-left font-bold">Type</th>
+            <th className="px-3 py-3 text-left font-bold">Default</th>
+            <th className="px-3 py-3 text-left font-bold">Description</th>
           </tr>
         </thead>
         <tbody>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>showHeader</td>
-            <td style={{ padding: "0.75rem" }}>boolean</td>
-            <td style={{ padding: "0.75rem" }}>true</td>
-            <td style={{ padding: "0.75rem" }}>Show/hide the header component</td>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">showHeader</td>
+            <td className="px-3 py-3">boolean</td>
+            <td className="px-3 py-3">true</td>
+            <td className="px-3 py-3">Show/hide the header component</td>
           </tr>
-          <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-            <td style={{ padding: "0.75rem" }}>showSidebar</td>
-            <td style={{ padding: "0.75rem" }}>boolean</td>
-            <td style={{ padding: "0.75rem" }}>true</td>
-            <td style={{ padding: "0.75rem" }}>Show/hide the sidebar navigation</td>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3">showSidebar</td>
+            <td className="px-3 py-3">boolean</td>
+            <td className="px-3 py-3">true</td>
+            <td className="px-3 py-3">Show/hide the sidebar navigation</td>
           </tr>
           <tr>
-            <td style={{ padding: "0.75rem" }}>showFooter</td>
-            <td style={{ padding: "0.75rem" }}>boolean</td>
-            <td style={{ padding: "0.75rem" }}>true</td>
-            <td style={{ padding: "0.75rem" }}>Show/hide the footer component</td>
+            <td className="px-3 py-3">showFooter</td>
+            <td className="px-3 py-3">boolean</td>
+            <td className="px-3 py-3">true</td>
+            <td className="px-3 py-3">Show/hide the footer component</td>
           </tr>
         </tbody>
       </table>

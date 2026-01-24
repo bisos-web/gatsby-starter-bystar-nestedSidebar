@@ -13,7 +13,7 @@ import Seo from "../components/seo"
 export default function EmbeddedContentOnlyPage() {
   return (
     <Layout showHeader={false} showSidebar={false} showFooter={false}>
-      <div style={{ maxWidth: "100%", padding: "0" }}>
+      <div className="w-full p-0">
         <h1>Full-Width Embedded Content</h1>
         <p>
           This is a content-only page with no header, sidebar, or footer, giving all space to the

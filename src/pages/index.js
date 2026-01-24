@@ -7,10 +7,10 @@ import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+    <div className="max-w-6xl mx-auto px-4 w-full overflow-hidden">
       {/* Hero Section */}
-      <section style={{ paddingBottom: "50px", borderBottom: "1px solid #e5e7eb", marginBottom: "50px" }}>
-        <div style={{ textAlign: "center", marginBottom: "30px" }}>
+      <section className="pb-12 border-b border-gray-200 mb-12">
+        <div className="text-center mb-8">
           <StaticImage
             src="../images/example.png"
             loading="eager"
@@ -18,85 +18,70 @@ const IndexPage = () => (
             quality={95}
             formats={["auto", "webp", "avif"]}
             alt="ByStar Nested Sidebar"
-            style={{ marginBottom: "20px" }}
+            className="inline-block mb-5"
           />
         </div>
-        <h1 style={{ fontSize: "48px", marginBottom: "20px", color: "#001a4d", textAlign: "center" }}>
+        <h1 className="text-5xl font-bold text-bystar-navy text-center mb-5">
           🌳 Gatsby Starter: ByStar Nested Sidebar
         </h1>
-        <p style={{ fontSize: "20px", lineHeight: "1.6", color: "#555", marginBottom: "30px" }}>
+        <p className="text-xl leading-relaxed text-gray-600 mb-8 text-center">
           A professional, feature-rich Gatsby starter designed for <strong>ByStar and hierarchical websites</strong>. 
           Features responsive navigation, flexible layouts, accessibility support, and privacy-respecting search—all built-in.
         </p>
-        <div style={{ display: "flex", gap: "15px", flexWrap: "wrap" }}>
-          <Link to="/about/this-starter" style={{
-            backgroundColor: "#001a4d",
-            color: "white",
-            padding: "12px 24px",
-            borderRadius: "4px",
-            textDecoration: "none",
-            fontWeight: "bold"
-          }}>
+        <div className="flex justify-center gap-4 flex-wrap">
+          <Link to="/about/this-starter" className="px-8 py-4 bg-bystar-navy text-white rounded-lg font-bold text-lg border-2 border-bystar-navy hover:bg-opacity-90 hover:shadow-lg transition-all no-underline">
             Learn More
           </Link>
-          <a href="https://github.com/bisos-web/gatsby-starter-bystar-nestedSidebar" target="_blank" rel="noopener noreferrer" style={{
-            backgroundColor: "#f3f4f6",
-            color: "#001a4d",
-            padding: "12px 24px",
-            borderRadius: "4px",
-            textDecoration: "none",
-            fontWeight: "bold",
-            border: "1px solid #d1d5db"
-          }}>
+          <a href="https://github.com/bisos-web/gatsby-starter-bystar-nestedSidebar" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-bystar-navy rounded-lg font-bold text-lg border-2 border-bystar-navy hover:bg-gray-50 hover:shadow-lg transition-all no-underline">
             View on GitHub
           </a>
         </div>
       </section>
 
       {/* Core Features */}
-      <section style={{ marginBottom: "50px" }}>
-        <h2 style={{ fontSize: "32px", marginBottom: "30px", color: "#001a4d" }}>✨ Core Features</h2>
+      <section className="mb-12">
+        <h2 className="text-4xl font-bold text-bystar-navy mb-8">✨ Core Features</h2>
         
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "25px" }}>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
           
-          <div style={{ padding: "20px", backgroundColor: "#f9fafb", borderRadius: "8px", borderLeft: "4px solid #001a4d" }}>
-            <h3 style={{ fontSize: "18px", marginBottom: "10px", color: "#001a4d" }}>🎨 Hierarchical Navigation</h3>
-            <p style={{ color: "#666", lineHeight: "1.5" }}>
+          <div className="p-6 bg-gray-50 rounded-lg border-l-4 border-bystar-navy">
+            <h3 className="text-lg font-bold text-bystar-navy mb-4">🎨 Hierarchical Navigation</h3>
+            <p className="text-gray-600 leading-relaxed">
               Nested sidebar supporting up to 5 levels deep with smart auto-expansion based on current page location.
             </p>
           </div>
 
-          <div style={{ padding: "20px", backgroundColor: "#f9fafb", borderRadius: "8px", borderLeft: "4px solid #001a4d" }}>
-            <h3 style={{ fontSize: "18px", marginBottom: "10px", color: "#001a4d" }}>📱 Fully Responsive</h3>
-            <p style={{ color: "#666", lineHeight: "1.5" }}>
+          <div className="p-6 bg-gray-50 rounded-lg border-l-4 border-bystar-navy">
+            <h3 className="text-lg font-bold text-bystar-navy mb-4">📱 Fully Responsive</h3>
+            <p className="text-gray-600 leading-relaxed">
               Mobile-first design with Tailwind CSS v4. Hamburger menu on mobile, permanent sidebar on desktop.
             </p>
           </div>
 
-          <div style={{ padding: "20px", backgroundColor: "#f9fafb", borderRadius: "8px", borderLeft: "4px solid #001a4d" }}>
-            <h3 style={{ fontSize: "18px", marginBottom: "10px", color: "#001a4d" }}>🔍 Privacy-First Search</h3>
-            <p style={{ color: "#666", lineHeight: "1.5" }}>
+          <div className="p-6 bg-gray-50 rounded-lg border-l-4 border-bystar-navy">
+            <h3 className="text-lg font-bold text-bystar-navy mb-4">🔍 Privacy-First Search</h3>
+            <p className="text-gray-600 leading-relaxed">
               Client-side full-text search powered by Lunr.js. No data sent to external servers.
             </p>
           </div>
 
-          <div style={{ padding: "20px", backgroundColor: "#f9fafb", borderRadius: "8px", borderLeft: "4px solid #001a4d" }}>
-            <h3 style={{ fontSize: "18px", marginBottom: "10px", color: "#001a4d" }}>♿ Accessible</h3>
-            <p style={{ color: "#666", lineHeight: "1.5" }}>
-              WCAG 2.1 compliant with keyboard navigation, screen reader support, and proper contrast ratios.
+          <div className="p-6 bg-gray-50 rounded-lg border-l-4 border-bystar-navy">
+            <h3 className="text-lg font-bold text-bystar-navy mb-4">♿ Accessibility-Focused</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Built with semantic HTML, ARIA support, and keyboard navigation. Audit recommended before production.
             </p>
           </div>
 
-          <div style={{ padding: "20px", backgroundColor: "#f9fafb", borderRadius: "8px", borderLeft: "4px solid #001a4d" }}>
-            <h3 style={{ fontSize: "18px", marginBottom: "10px", color: "#001a4d" }}>🎞️ Embed Content</h3>
-            <p style={{ color: "#666", lineHeight: "1.5" }}>
+          <div className="p-6 bg-gray-50 rounded-lg border-l-4 border-bystar-navy">
+            <h3 className="text-lg font-bold text-bystar-navy mb-4">🎞️ Embed Content</h3>
+            <p className="text-gray-600 leading-relaxed">
               Flexible iframe embedding system for external websites, YouTube, and other services with security controls.
             </p>
           </div>
 
-          <div style={{ padding: "20px", backgroundColor: "#f9fafb", borderRadius: "8px", borderLeft: "4px solid #001a4d" }}>
-            <h3 style={{ fontSize: "18px", marginBottom: "10px", color: "#001a4d" }}>🛠️ Flexible Layouts</h3>
-            <p style={{ color: "#666", lineHeight: "1.5" }}>
+          <div className="p-6 bg-gray-50 rounded-lg border-l-4 border-bystar-navy">
+            <h3 className="text-lg font-bold text-bystar-navy mb-4">🛠️ Flexible Layouts</h3>
+            <p className="text-gray-600 leading-relaxed">
               Control header, sidebar, and footer visibility per page. From full-width to app-like interfaces.
             </p>
           </div>
@@ -105,17 +90,11 @@ const IndexPage = () => (
       </section>
 
       {/* Getting Started */}
-      <section style={{ marginBottom: "50px", backgroundColor: "#f9fafb", padding: "40px", borderRadius: "8px" }}>
-        <h2 style={{ fontSize: "32px", marginBottom: "20px", color: "#001a4d" }}>🚀 Quick Start</h2>
+      <section className="mb-12 p-6 rounded-lg border-2 border-gray-300 shadow-md overflow-hidden" style={{backgroundColor: '#f3f4f6'}}>
+        <h2 className="text-4xl font-bold text-bystar-navy mb-5">🚀 Quick Start</h2>
         
-        <pre style={{
-          backgroundColor: "#2d3748",
-          color: "#e2e8f0",
-          padding: "20px",
-          borderRadius: "8px",
-          overflowX: "auto",
-          marginBottom: "20px"
-        }}>
+        <div className="overflow-x-auto -mx-6 px-6">
+          <pre className="bg-gray-900 text-gray-100 p-4 rounded font-mono text-sm border border-gray-700 whitespace-pre-wrap break-words">
 {`# Clone the repository
 git clone https://github.com/bisos-web/gatsby-starter-bystar-nestedSidebar.git
 cd gatsby-starter-bystar-nestedSidebar
@@ -127,155 +106,97 @@ npm install
 npm run develop
 
 # Visit http://localhost:8000`}
-        </pre>
+          </pre>
+        </div>
 
-        <p style={{ color: "#666", marginBottom: "20px" }}>
+        <p className="text-gray-600 leading-relaxed mb-5">
           Then explore the site to see the features in action. Visit the <strong>For Developers</strong> section for comprehensive guides on creating pages, customizing layouts, and embedding content.
         </p>
       </section>
 
       {/* Explore Section */}
-      <section style={{ marginBottom: "50px" }}>
-        <h2 style={{ fontSize: "32px", marginBottom: "30px", color: "#001a4d" }}>🔗 Explore the Starter</h2>
+      <section className="mb-12">
+        <h2 className="text-4xl font-bold text-bystar-navy mb-8">🔗 Explore the Starter</h2>
         
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "20px" }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           
-          <Link to="/about/this-starter" style={{
-            padding: "20px",
-            backgroundColor: "#f3f4f6",
-            borderRadius: "8px",
-            textDecoration: "none",
-            color: "#001a4d",
-            fontWeight: "bold",
-            border: "1px solid #d1d5db",
-            transition: "all 0.2s"
-          }}>
-            📖 About This Starter
+          <Link to="/about/this-starter" className="p-6 bg-gray-100 rounded-lg border border-gray-300 no-underline hover:bg-gray-200 transition-colors">
+            <div className="text-bystar-navy font-bold">📖 About This Starter</div>
           </Link>
 
-          <Link to="/developers/creating-pages" style={{
-            padding: "20px",
-            backgroundColor: "#f3f4f6",
-            borderRadius: "8px",
-            textDecoration: "none",
-            color: "#001a4d",
-            fontWeight: "bold",
-            border: "1px solid #d1d5db",
-            transition: "all 0.2s"
-          }}>
-            ✏️ Creating Pages Guide
+          <Link to="/developers/creating-pages" className="p-6 bg-gray-100 rounded-lg border border-gray-300 no-underline hover:bg-gray-200 transition-colors">
+            <div className="text-bystar-navy font-bold">✏️ Creating Pages Guide</div>
           </Link>
 
-          <Link to="/developers/layout-examples" style={{
-            padding: "20px",
-            backgroundColor: "#f3f4f6",
-            borderRadius: "8px",
-            textDecoration: "none",
-            color: "#001a4d",
-            fontWeight: "bold",
-            border: "1px solid #d1d5db",
-            transition: "all 0.2s"
-          }}>
-            🎨 Layout Examples
+          <Link to="/developers/layout-examples" className="p-6 bg-gray-100 rounded-lg border border-gray-300 no-underline hover:bg-gray-200 transition-colors">
+            <div className="text-bystar-navy font-bold">🎨 Layout Examples</div>
           </Link>
 
-          <Link to="/explore/search" style={{
-            padding: "20px",
-            backgroundColor: "#f3f4f6",
-            borderRadius: "8px",
-            textDecoration: "none",
-            color: "#001a4d",
-            fontWeight: "bold",
-            border: "1px solid #d1d5db",
-            transition: "all 0.2s"
-          }}>
-            🔍 Search
+          <Link to="/explore/search" className="p-6 bg-gray-100 rounded-lg border border-gray-300 no-underline hover:bg-gray-200 transition-colors">
+            <div className="text-bystar-navy font-bold">🔍 Search</div>
           </Link>
 
-          <Link to="/sitemap" style={{
-            padding: "20px",
-            backgroundColor: "#f3f4f6",
-            borderRadius: "8px",
-            textDecoration: "none",
-            color: "#001a4d",
-            fontWeight: "bold",
-            border: "1px solid #d1d5db",
-            transition: "all 0.2s"
-          }}>
-            🗺️ Sitemap
+          <Link to="/sitemap" className="p-6 bg-gray-100 rounded-lg border border-gray-300 no-underline hover:bg-gray-200 transition-colors">
+            <div className="text-bystar-navy font-bold">🗺️ Sitemap</div>
           </Link>
 
-          <Link to="/explore/accessibility" style={{
-            padding: "20px",
-            backgroundColor: "#f3f4f6",
-            borderRadius: "8px",
-            textDecoration: "none",
-            color: "#001a4d",
-            fontWeight: "bold",
-            border: "1px solid #d1d5db",
-            transition: "all 0.2s"
-          }}>
-            ♿ Accessibility
+          <Link to="/explore/accessibility" className="p-6 bg-gray-100 rounded-lg border border-gray-300 no-underline hover:bg-gray-200 transition-colors">
+            <div className="text-bystar-navy font-bold">♿ Accessibility</div>
           </Link>
-
         </div>
       </section>
 
-      {/* Beneath the Layers */}
-      <section style={{ paddingTop: "50px", borderTop: "1px solid #e5e7eb" }}>
-        <h2 style={{ fontSize: "28px", marginBottom: "20px", color: "#666" }}>📚 Beneath the Layers</h2>
+      {/* Extensibility */}
+      <section className="pt-8 border-t border-gray-200">
+        <h2 className="text-3xl text-gray-700 mb-5">🚀 Built on Gatsby's Foundation</h2>
         
-        <p style={{ color: "#666", marginBottom: "20px", lineHeight: "1.6" }}>
-          This starter is built on top of Gatsby's foundation. You can still use all standard Gatsby features and patterns—these example pages demonstrate that pages don't need to be part of the sidebar menu:
+        <p className="text-gray-600 leading-relaxed mb-5">
+          This starter enhances Gatsby with a professional sidebar navigation system while preserving all of Gatsby's capabilities. You get the best of both worlds: a powerful content management layer and full access to Gatsby's ecosystem.
         </p>
 
-        <ul style={{ listStyle: "none", padding: 0, display: "flex", flexWrap: "wrap", gap: "15px" }}>
-          <li>
-            <Link to="/page-2" style={{ color: "#001a4d", textDecoration: "underline" }}>
+        <p className="text-gray-600 leading-relaxed mb-5">
+          The example pages below demonstrate that you can create pages outside the sidebar menu—useful for utility pages, advanced Gatsby features, or experimental content:
+        </p>
+
+        <ul className="list-none p-0 flex flex-wrap gap-4 mb-lg">
+          <li className="mb-2">
+            <Link to="/page-2" className="text-bystar-navy underline">
               Page 2
             </Link>
-            <span style={{ color: "#999", marginLeft: "10px" }}>(Simple page linking)</span>
+            <span className="text-gray-400 ml-2 text-sm">(Simple page linking)</span>
           </li>
-          <li>
-            <Link to="/using-typescript" style={{ color: "#001a4d", textDecoration: "underline" }}>
+          <li className="mb-2">
+            <Link to="/using-typescript" className="text-bystar-navy underline">
               TypeScript
             </Link>
-            <span style={{ color: "#999", marginLeft: "10px" }}>(Advanced example)</span>
+            <span className="text-gray-400 ml-2 text-sm">(Advanced example)</span>
           </li>
-          <li>
-            <Link to="/using-ssr" style={{ color: "#001a4d", textDecoration: "underline" }}>
+          <li className="mb-2">
+            <Link to="/using-ssr" className="text-bystar-navy underline">
               SSR
             </Link>
-            <span style={{ color: "#999", marginLeft: "10px" }}>(Server-side rendering)</span>
+            <span className="text-gray-400 ml-2 text-sm">(Server-side rendering)</span>
           </li>
-          <li>
-            <Link to="/using-dsg" style={{ color: "#001a4d", textDecoration: "underline" }}>
+          <li className="mb-2">
+            <Link to="/using-dsg" className="text-bystar-navy underline">
               DSG
             </Link>
-            <span style={{ color: "#999", marginLeft: "10px" }}>(Deferred static generation)</span>
+            <span className="text-gray-400 ml-2 text-sm">(Deferred static generation)</span>
           </li>
         </ul>
 
-        <p style={{ color: "#999", fontSize: "14px", marginTop: "30px" }}>
-          These pages show that you can build any Gatsby site on top of this starter while leveraging the Nested Sidebar system for your main content navigation.
+        <p className="text-gray-500 text-sm mt-5">
+          Explore these pages to understand how the sidebar system is a <strong>layer on top of Gatsby</strong>, not a replacement for it.
         </p>
       </section>
 
       {/* Footer CTA */}
-      <section style={{ marginTop: "50px", paddingTop: "30px", borderTop: "1px solid #e5e7eb", textAlign: "center" }}>
-        <h2 style={{ fontSize: "28px", marginBottom: "15px", color: "#001a4d" }}>Ready to Build?</h2>
-        <p style={{ color: "#666", marginBottom: "25px" }}>
+      <section className="mt-8 pt-5 border-t border-gray-200 text-center">
+        <h2 className="text-3xl text-bystar-navy mb-2">Ready to Build?</h2>
+        <p className="text-gray-600 mb-5">
           Clone the repository and start building your ByStar website today.
         </p>
-        <a href="https://github.com/bisos-web/gatsby-starter-bystar-nestedSidebar" target="_blank" rel="noopener noreferrer" style={{
-          backgroundColor: "#001a4d",
-          color: "white",
-          padding: "12px 32px",
-          borderRadius: "4px",
-          textDecoration: "none",
-          fontWeight: "bold",
-          display: "inline-block"
-        }}>
+        <a href="https://github.com/bisos-web/gatsby-starter-bystar-nestedSidebar" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 bg-bystar-navy text-white rounded-lg font-bold text-lg hover:bg-opacity-90 hover:shadow-lg transition-all no-underline">
           Clone on GitHub →
         </a>
       </section>

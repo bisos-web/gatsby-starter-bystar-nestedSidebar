@@ -16,16 +16,7 @@ const ContentOnlyPage = () => (
     </p>
 
     <h3>Configuration</h3>
-    <pre
-      style={{
-        backgroundColor: "#1f2937",
-        color: "#e5e7eb",
-        padding: "1rem",
-        borderRadius: "4px",
-        overflow: "auto",
-        fontSize: "0.85rem",
-      }}
-    >
+    <pre className="bg-gray-900 text-gray-300 p-4 rounded overflow-auto text-xs">
       {`<Layout 
   showHeader={false} 
   showSidebar={false} 
@@ -37,36 +28,29 @@ const ContentOnlyPage = () => (
     </pre>
 
     <h2>What's Visible</h2>
-    <table
-      style={{
-        width: "100%",
-        borderCollapse: "collapse",
-        marginTop: "1rem",
-        marginBottom: "1rem",
-      }}
-    >
+    <table className="w-full border-collapse my-4">
       <thead>
-        <tr style={{ backgroundColor: "#f3f4f6", borderBottom: "2px solid #d1d5db" }}>
-          <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>Component</th>
-          <th style={{ padding: "0.75rem", textAlign: "left", fontWeight: "bold" }}>Visible?</th>
+        <tr className="bg-gray-100 border-b-2 border-gray-300">
+          <th className="px-3 py-3 text-left font-bold">Component</th>
+          <th className="px-3 py-3 text-left font-bold">Visible?</th>
         </tr>
       </thead>
       <tbody>
-        <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-          <td style={{ padding: "0.75rem" }}>Header</td>
-          <td style={{ padding: "0.75rem" }}>❌ No</td>
+        <tr className="border-b border-gray-200">
+          <td className="px-3 py-3">Header</td>
+          <td className="px-3 py-3">❌ No</td>
         </tr>
-        <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-          <td style={{ padding: "0.75rem" }}>Sidebar</td>
-          <td style={{ padding: "0.75rem" }}>❌ No</td>
+        <tr className="border-b border-gray-200">
+          <td className="px-3 py-3">Sidebar</td>
+          <td className="px-3 py-3">❌ No</td>
         </tr>
-        <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-          <td style={{ padding: "0.75rem" }}>Main Content</td>
-          <td style={{ padding: "0.75rem" }}>✅ Yes (Full Screen)</td>
+        <tr className="border-b border-gray-200">
+          <td className="px-3 py-3">Main Content</td>
+          <td className="px-3 py-3">✅ Yes (Full Screen)</td>
         </tr>
         <tr>
-          <td style={{ padding: "0.75rem" }}>Footer</td>
-          <td style={{ padding: "0.75rem" }}>❌ No</td>
+          <td className="px-3 py-3">Footer</td>
+          <td className="px-3 py-3">❌ No</td>
         </tr>
       </tbody>
     </table>
@@ -107,16 +91,7 @@ const ContentOnlyPage = () => (
     </ul>
 
     <h2>Code Template</h2>
-    <pre
-      style={{
-        backgroundColor: "#1f2937",
-        color: "#e5e7eb",
-        padding: "1rem",
-        borderRadius: "4px",
-        overflow: "auto",
-        fontSize: "0.85rem",
-      }}
-    >
+    <pre className="bg-gray-900 text-gray-300 p-4 rounded overflow-auto text-xs">
       {`import Layout from "../components/Layout"
 import Seo from "../components/seo"
 

@@ -14,35 +14,15 @@ export default function LayoutExamplesPage() {
       </p>
 
       <h2>Available Layouts</h2>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        gap: '2rem',
-        marginTop: '2rem',
-      }}>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
         {/* No Sidebar Card */}
-        <Link to="/no-sidebar" style={{ textDecoration: 'none' }}>
-          <div style={{
-            padding: '1.5rem',
-            border: '1px solid #d1d5db',
-            borderRadius: '8px',
-            backgroundColor: '#f9fafb',
-            transition: 'all 0.3s ease',
-            cursor: 'pointer',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.boxShadow = 'none';
-            e.currentTarget.style.transform = 'translateY(0)';
-          }}>
-            <h3 style={{ marginTop: 0, color: '#1f2937' }}>No Sidebar</h3>
-            <p style={{ color: '#6b7280', marginBottom: '1rem' }}>
+        <Link to="/no-sidebar" className="no-underline">
+          <div className="p-6 border border-gray-300 rounded-lg bg-gray-50 transition-all cursor-pointer hover:shadow-lg hover:-translate-y-1">
+            <h3 className="mt-0 text-gray-900">No Sidebar</h3>
+            <p className="text-gray-600 mb-4">
               Header ✓ | Sidebar ✗ | Footer ✓
             </p>
-            <p style={{ fontSize: '0.9rem', color: '#4b5563' }}>
+            <p className="text-sm text-gray-700">
               Full-width content with header and footer navigation. Perfect for landing pages
               and wide-format content displays.
             </p>
@@ -50,28 +30,13 @@ export default function LayoutExamplesPage() {
         </Link>
 
         {/* No Header/Footer Card */}
-        <Link to="/no-header-footer" style={{ textDecoration: 'none' }}>
-          <div style={{
-            padding: '1.5rem',
-            border: '1px solid #d1d5db',
-            borderRadius: '8px',
-            backgroundColor: '#f9fafb',
-            transition: 'all 0.3s ease',
-            cursor: 'pointer',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.boxShadow = 'none';
-            e.currentTarget.style.transform = 'translateY(0)';
-          }}>
-            <h3 style={{ marginTop: 0, color: '#1f2937' }}>No Header/Footer</h3>
-            <p style={{ color: '#6b7280', marginBottom: '1rem' }}>
+        <Link to="/no-header-footer" className="no-underline">
+          <div className="p-6 border border-gray-300 rounded-lg bg-gray-50 transition-all cursor-pointer hover:shadow-lg hover:-translate-y-1">
+            <h3 className="mt-0 text-gray-900">No Header/Footer</h3>
+            <p className="text-gray-600 mb-4">
               Header ✗ | Sidebar ✓ | Footer ✗
             </p>
-            <p style={{ fontSize: '0.9rem', color: '#4b5563' }}>
+            <p className="text-sm text-gray-700">
               Sidebar-based navigation with content focus. Ideal for admin panels,
               dashboards, and application interfaces.
             </p>
@@ -79,28 +44,13 @@ export default function LayoutExamplesPage() {
         </Link>
 
         {/* Content Only Card */}
-        <Link to="/content-only" style={{ textDecoration: 'none' }}>
-          <div style={{
-            padding: '1.5rem',
-            border: '1px solid #d1d5db',
-            borderRadius: '8px',
-            backgroundColor: '#f9fafb',
-            transition: 'all 0.3s ease',
-            cursor: 'pointer',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.boxShadow = 'none';
-            e.currentTarget.style.transform = 'translateY(0)';
-          }}>
-            <h3 style={{ marginTop: 0, color: '#1f2937' }}>Content Only</h3>
-            <p style={{ color: '#6b7280', marginBottom: '1rem' }}>
+        <Link to="/content-only" className="no-underline">
+          <div className="p-6 border border-gray-300 rounded-lg bg-gray-50 transition-all cursor-pointer hover:shadow-lg hover:-translate-y-1">
+            <h3 className="mt-0 text-gray-900">Content Only</h3>
+            <p className="text-gray-600 mb-4">
               Header ✗ | Sidebar ✗ | Footer ✗
             </p>
-            <p style={{ fontSize: '0.9rem', color: '#4b5563' }}>
+            <p className="text-sm text-gray-700">
               Full-viewport immersive experience. Perfect for embedded content,
               applications, and focused interactions.
             </p>
@@ -108,47 +58,43 @@ export default function LayoutExamplesPage() {
         </Link>
       </div>
 
-      <h2 style={{ marginTop: '3rem' }}>Layout Comparison</h2>
-      <table style={{
-        width: '100%',
-        borderCollapse: 'collapse',
-        marginTop: '1rem',
-      }}>
+      <h2 className="mt-12">Layout Comparison</h2>
+      <table className="w-full border-collapse mt-4">
         <thead>
-          <tr style={{ backgroundColor: '#f3f4f6', borderBottom: '2px solid #d1d5db' }}>
-            <th style={{ padding: '0.75rem', textAlign: 'left', fontWeight: 'bold' }}>Layout</th>
-            <th style={{ padding: '0.75rem', textAlign: 'center', fontWeight: 'bold' }}>Header</th>
-            <th style={{ padding: '0.75rem', textAlign: 'center', fontWeight: 'bold' }}>Sidebar</th>
-            <th style={{ padding: '0.75rem', textAlign: 'center', fontWeight: 'bold' }}>Footer</th>
-            <th style={{ padding: '0.75rem', textAlign: 'left', fontWeight: 'bold' }}>Best For</th>
+          <tr className="bg-gray-100 border-b-2 border-gray-300">
+            <th className="px-3 py-3 text-left font-bold">Layout</th>
+            <th className="px-3 py-3 text-center font-bold">Header</th>
+            <th className="px-3 py-3 text-center font-bold">Sidebar</th>
+            <th className="px-3 py-3 text-center font-bold">Footer</th>
+            <th className="px-3 py-3 text-left font-bold">Best For</th>
           </tr>
         </thead>
         <tbody>
-          <tr style={{ borderBottom: '1px solid #e5e7eb' }}>
-            <td style={{ padding: '0.75rem', fontWeight: 'bold' }}>No Sidebar</td>
-            <td style={{ padding: '0.75rem', textAlign: 'center' }}>✓</td>
-            <td style={{ padding: '0.75rem', textAlign: 'center' }}>✗</td>
-            <td style={{ padding: '0.75rem', textAlign: 'center' }}>✓</td>
-            <td style={{ padding: '0.75rem' }}>Wide content, landing pages</td>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3 font-bold">No Sidebar</td>
+            <td className="px-3 py-3 text-center">✓</td>
+            <td className="px-3 py-3 text-center">✗</td>
+            <td className="px-3 py-3 text-center">✓</td>
+            <td className="px-3 py-3">Wide content, landing pages</td>
           </tr>
-          <tr style={{ borderBottom: '1px solid #e5e7eb' }}>
-            <td style={{ padding: '0.75rem', fontWeight: 'bold' }}>No Header/Footer</td>
-            <td style={{ padding: '0.75rem', textAlign: 'center' }}>✗</td>
-            <td style={{ padding: '0.75rem', textAlign: 'center' }}>✓</td>
-            <td style={{ padding: '0.75rem', textAlign: 'center' }}>✗</td>
-            <td style={{ padding: '0.75rem' }}>Dashboards, admin panels</td>
+          <tr className="border-b border-gray-200">
+            <td className="px-3 py-3 font-bold">No Header/Footer</td>
+            <td className="px-3 py-3 text-center">✗</td>
+            <td className="px-3 py-3 text-center">✓</td>
+            <td className="px-3 py-3 text-center">✗</td>
+            <td className="px-3 py-3">Dashboards, admin panels</td>
           </tr>
           <tr>
-            <td style={{ padding: '0.75rem', fontWeight: 'bold' }}>Content Only</td>
-            <td style={{ padding: '0.75rem', textAlign: 'center' }}>✗</td>
-            <td style={{ padding: '0.75rem', textAlign: 'center' }}>✗</td>
-            <td style={{ padding: '0.75rem', textAlign: 'center' }}>✗</td>
-            <td style={{ padding: '0.75rem' }}>Immersive, full-screen apps</td>
+            <td className="px-3 py-3 font-bold">Content Only</td>
+            <td className="px-3 py-3 text-center">✗</td>
+            <td className="px-3 py-3 text-center">✗</td>
+            <td className="px-3 py-3 text-center">✗</td>
+            <td className="px-3 py-3">Immersive, full-screen apps</td>
           </tr>
         </tbody>
       </table>
 
-      <h2 style={{ marginTop: '3rem' }}>How to Use</h2>
+      <h2 className="mt-12">How to Use</h2>
       <p>
         Each layout example includes comprehensive documentation explaining how to configure the layout,
         what components are visible, and the best use cases. Click on any layout above to explore its

@@ -66,83 +66,7 @@ const ContactPage = () => {
     }
   }
 
-  const formStyles = {
-    container: {
-      maxWidth: "600px",
-      margin: "2rem 0",
-    },
-    formGroup: {
-      marginBottom: "1.5rem",
-    },
-    label: {
-      display: "block",
-      marginBottom: "0.5rem",
-      fontWeight: "600",
-      color: "#333",
-    },
-    input: {
-      width: "100%",
-      padding: "0.75rem",
-      fontSize: "1rem",
-      border: "1px solid #ddd",
-      borderRadius: "4px",
-      fontFamily: "inherit",
-      boxSizing: "border-box",
-    },
-    textarea: {
-      width: "100%",
-      padding: "0.75rem",
-      fontSize: "1rem",
-      border: "1px solid #ddd",
-      borderRadius: "4px",
-      fontFamily: "inherit",
-      boxSizing: "border-box",
-      minHeight: "150px",
-      resize: "vertical",
-    },
-    button: {
-      padding: "0.75rem 1.5rem",
-      fontSize: "1rem",
-      backgroundColor: "#001a4d",
-      color: "white",
-      border: "none",
-      borderRadius: "4px",
-      cursor: "pointer",
-      fontWeight: "600",
-    },
-    buttonHover: {
-      backgroundColor: "#003d99",
-    },
-    successMessage: {
-      padding: "1rem",
-      marginBottom: "1.5rem",
-      backgroundColor: "#d4edda",
-      color: "#155724",
-      border: "1px solid #c3e6cb",
-      borderRadius: "4px",
-    },
-    errorMessage: {
-      padding: "1rem",
-      marginBottom: "1.5rem",
-      backgroundColor: "#f8d7da",
-      color: "#721c24",
-      border: "1px solid #f5c6cb",
-      borderRadius: "4px",
-    },
-    required: {
-      color: "#dc3545",
-    },
-    infoBox: {
-      padding: "1rem",
-      marginBottom: "2rem",
-      backgroundColor: "#e7f3ff",
-      color: "#004085",
-      border: "1px solid #b8daff",
-      borderRadius: "4px",
-      fontSize: "0.95rem",
-      lineHeight: "1.6",
-    },
-  }
+
 
   return (
     <Layout>
@@ -152,29 +76,29 @@ const ContactPage = () => {
         Your information will be handled with care and transparency.
       </p>
 
-      <div style={formStyles.infoBox}>
+      <div className="p-4 mb-8 bg-blue-50 text-blue-900 border border-blue-200 rounded text-sm leading-relaxed">
         <strong>About ByStar:</strong> This site is built using Gatsby and is part of a larger initiative 
         to create a privacy-respecting, autonomy-preserving digital ecosystem. We believe in end-to-end 
         communications and transparent services. <a href="/explore/help">Learn more about our values.</a>
       </div>
 
-      <div style={formStyles.container}>
+      <div className="max-w-xl my-8">
         {submitted && (
-          <div style={formStyles.successMessage}>
+          <div className="p-4 mb-6 bg-green-100 text-green-900 border border-green-200 rounded">
             ✓ Thank you! Your message has been sent successfully. We'll be in touch soon.
           </div>
         )}
 
         {error && (
-          <div style={formStyles.errorMessage}>
+          <div className="p-4 mb-6 bg-red-100 text-red-900 border border-red-200 rounded">
             ✗ {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit}>
-          <div style={formStyles.formGroup}>
-            <label htmlFor="name" style={formStyles.label}>
-              Name <span style={formStyles.required}>*</span>
+          <div className="mb-6">
+            <label htmlFor="name" className="block mb-2 font-semibold text-gray-800">
+              Name <span className="text-red-600">*</span>
             </label>
             <input
               type="text"
@@ -182,15 +106,15 @@ const ContactPage = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              style={formStyles.input}
+              className="w-full px-3 py-2 text-base border border-gray-300 rounded"
               placeholder="Your full name"
               required
             />
           </div>
 
-          <div style={formStyles.formGroup}>
-            <label htmlFor="email" style={formStyles.label}>
-              Email <span style={formStyles.required}>*</span>
+          <div className="mb-6">
+            <label htmlFor="email" className="block mb-2 font-semibold text-gray-800">
+              Email <span className="text-red-600">*</span>
             </label>
             <input
               type="email"
@@ -198,17 +122,17 @@ const ContactPage = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              style={formStyles.input}
+              className="w-full px-3 py-2 text-base border border-gray-300 rounded"
               placeholder="your.email@example.com"
               required
             />
-            <small style={{color: '#666', marginTop: '0.25rem', display: 'block'}}>
+            <small className="text-gray-600 block mt-1">
               We'll use this to respond to your message. Your email is private.
             </small>
           </div>
 
-          <div style={formStyles.formGroup}>
-            <label htmlFor="subject" style={formStyles.label}>
+          <div className="mb-6">
+            <label htmlFor="subject" className="block mb-2 font-semibold text-gray-800">
               Subject
             </label>
             <input
@@ -217,21 +141,22 @@ const ContactPage = () => {
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              style={formStyles.input}
+              className="w-full px-3 py-2 text-base border border-gray-300 rounded"
               placeholder="What is this about?"
             />
           </div>
 
-          <div style={formStyles.formGroup}>
-            <label htmlFor="message" style={formStyles.label}>
-              Message <span style={formStyles.required}>*</span>
+          <div className="mb-6">
+            <label htmlFor="message" className="block mb-2 font-semibold text-gray-800">
+              Message <span className="text-red-600">*</span>
             </label>
             <textarea
               id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
-              style={formStyles.textarea}
+              className="w-full px-3 py-2 text-base border border-gray-300 rounded resize-vertical"
+              style={{minHeight: "150px"}}
               placeholder="Your message here..."
               required
             />
@@ -239,9 +164,7 @@ const ContactPage = () => {
 
           <button
             type="submit"
-            style={formStyles.button}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = formStyles.buttonHover.backgroundColor)}
-            onMouseLeave={(e) => (e.target.style.backgroundColor = formStyles.button.backgroundColor)}
+            className="px-6 py-3 text-base bg-bystar-navy text-white rounded font-semibold cursor-pointer hover:bg-opacity-90 transition-all"
           >
             Send Message
           </button>
