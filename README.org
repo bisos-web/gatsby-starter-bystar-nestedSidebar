@@ -36,6 +36,41 @@ Built with Gatsby 5, React 18, Tailwind CSS v3, Lunr.js search, and comprehensiv
 
   /The ByStar Nested Sidebar starter home page with full navigation sidebar exposed, showing the hierarchical menu structure, core features grid, and quick start section./
 
+* Table of Contents     :TOC:
+- [[#-quick-start][🚀 Quick Start]]
+  - [[#prerequisites][Prerequisites]]
+  - [[#installation][Installation]]
+- [[#-homepage-screenshot][📸 Homepage Screenshot]]
+- [[#-key-features][✨ Key Features]]
+  - [[#-layout--navigation][🎨 Layout & Navigation]]
+  - [[#-search--discovery][🔍 Search & Discovery]]
+  - [[#️-embedded-content][🎞️ Embedded Content]]
+  - [[#-accessibility--standards][♿ Accessibility & Standards]]
+  - [[#-content-organization][🎯 Content Organization]]
+  - [[#-developer-experience][🚀 Developer Experience]]
+  - [[#-features-by-section][📱 Features by Section]]
+- [[#-project-structure][📁 Project Structure]]
+- [[#-evolution-history][📜 Evolution History]]
+- [[#️-for-developers][🛠️ For Developers]]
+- [[#-tailwind-css-implementation-guide][🎨 Tailwind CSS Implementation Guide]]
+  - [[#styling-with-tailwind-css-v3][Styling with Tailwind CSS v3]]
+  - [[#key-learning-tailwind-v3-standard-configuration][Key Learning: Tailwind v3 Standard Configuration]]
+  - [[#production-build-optimization][Production Build Optimization]]
+- [[#-dependencies][📦 Dependencies]]
+  - [[#core-framework][Core Framework]]
+  - [[#styling-tailwind-css-v3][Styling (Tailwind CSS v3)]]
+  - [[#search--discovery][Search & Discovery]]
+  - [[#image-processing][Image Processing]]
+- [[#-search-implementation][🔍 Search Implementation]]
+- [[#-accessibility][♿ Accessibility]]
+- [[#-deployment][🚀 Deployment]]
+  - [[#deploy-to-github-pages][Deploy to GitHub Pages]]
+  - [[#deploy-to-netlify-or-vercel][Deploy to Netlify or Vercel]]
+- [[#-contributing][🤝 Contributing]]
+- [[#-learning-resources][📖 Learning Resources]]
+- [[#-license][📄 License]]
+- [[#-support][🙋 Support]]
+
 * ✨ Key Features
 
 ** 🎨 Layout & Navigation
