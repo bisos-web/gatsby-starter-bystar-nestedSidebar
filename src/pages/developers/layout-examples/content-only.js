@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/Layout"
-import Seo from "../components/seo"
+import Layout from "../../../components/Layout"
+import Seo from "../../../components/seo"
 
 const ContentOnlyPage = () => (
   <Layout showHeader={false} showSidebar={false} showFooter={false}>
@@ -117,8 +117,8 @@ const ContentOnlyPage = () => (
         fontSize: "0.85rem",
       }}
     >
-      {`import Layout from "../components/Layout"
-import Seo from "../components/seo"
+      {`import Layout from "../../../components/Layout"
+import Seo from "../../../components/seo"
 
 export default function MyPage() {
   return (
@@ -136,12 +136,16 @@ export default function MyPage() {
 export const Head = () => <Seo title="My Page" />`}
     </pre>
 
-    <h2>Related Examples</h2>
-    <ul>
-      <li>See <Link to="/embedded-full-width">Embedded Content</Link> for embedding external services</li>
-      <li>See <Link to="/no-sidebar">No Sidebar</Link> for wide-content layouts with header/footer</li>
-      <li>See <Link to="/no-header-footer">No Header/Footer</Link> for app-like layouts with sidebar</li>
-    </ul>
+    <h2>Navigation Back to Examples</h2>
+    <p>
+      Since this layout hides all site navigation, you can use the link below or open your browser's
+      back button to return to the Layout Examples directory:
+    </p>
+    <div style={{ marginTop: "1.5rem", padding: "1rem", backgroundColor: "#f0f4f8", borderRadius: "4px" }}>
+      <Link to="/developers/layout-examples" style={{ color: "#0066cc", textDecoration: "none", fontWeight: "bold" }}>
+        ← Back to Layout Examples
+      </Link>
+    </div>
   </Layout>
 )
 

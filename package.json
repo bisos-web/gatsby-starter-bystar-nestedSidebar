@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-starter-bystar-nested-sidebar",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A professional Gatsby starter with hierarchical navigation, responsive design, and accessibility for ByStar projects",
+  "version": "1.0.0",
+  "author": "Mohsen Banan <https://github.com/mohsenBanan>",
   "dependencies": {
     "gatsby": "^5.14.6",
     "gatsby-plugin-image": "^3.14.0",
@@ -38,9 +38,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/bisos-web/gatsby-starter-bystar-nestedSidebar"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/bisos-web/gatsby-starter-bystar-nestedSidebar/issues"
   }
 }

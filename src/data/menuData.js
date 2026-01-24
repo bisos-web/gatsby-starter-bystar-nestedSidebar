@@ -11,43 +11,22 @@ export const menuData = [
     path: "/about",
     children: [
       {
-        label: "Me",
-        path: "/about/me",
+        label: "This Starter",
+        path: "/about/this-starter",
       },
       {
-        label: "My work",
-        path: "/about/my-work",
+        label: "The Authors",
+        path: "/about/the-authors",
       },
-      {
-        label: "No-Sidebar",
-        path: "/about/no-sidebar",
-      },
-      {
-        label: "Content-Only",
-        path: "/about/content-only",
-      },
-
     ],
   },
   {
-    label: "Services",
-    path: "/services",
+    label: "Embedded Content",
+    path: "/embedded-full-width",
   },
   {
     label: "Contact",
     path: "/contact",
-  },
-  {
-    label: "No Side Bar",
-    path: "/no-sidebar",
-  },
-  {
-    label: "No Header/Footer",
-    path: "/no-header-footer",
-  },
-  {
-    label: "Content Only",
-    path: "/content-only",
   },
   {
     label: "Explore",
@@ -68,6 +47,38 @@ export const menuData = [
       {
         label: "Help",
         path: "/explore/help",
+      },
+    ],
+  },
+  {
+    label: "For Developers",
+    path: "/developers",
+    children: [
+      {
+        label: "Creating Pages",
+        path: "/developers/creating-pages",
+      },
+      {
+        label: "Layout Examples",
+        path: "/developers/layout-examples",
+        children: [
+          {
+            label: "No Sidebar",
+            path: "/developers/layout-examples/no-sidebar",
+          },
+          {
+            label: "No Header/Footer",
+            path: "/developers/layout-examples/no-header-footer",
+          },
+          {
+            label: "Content Only",
+            path: "/developers/layout-examples/content-only",
+          },
+        ],
+      },
+      {
+        label: "Embedded Services",
+        path: "/explore/embedded-services",
       },
     ],
   },

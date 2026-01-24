@@ -1,8 +1,8 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/Layout"
-import Seo from "../components/seo"
+import Layout from "../../../components/Layout"
+import Seo from "../../../components/seo"
 
 const NoSidebarPage = () => (
   <Layout showSidebar={false}>
@@ -109,8 +109,8 @@ const NoSidebarPage = () => (
         fontSize: "0.85rem",
       }}
     >
-      {`import Layout from "../components/Layout"
-import Seo from "../components/seo"
+      {`import Layout from "../../../components/Layout"
+import Seo from "../../../components/seo"
 
 export default function MyPage() {
   return (
@@ -124,7 +124,7 @@ export default function MyPage() {
 export const Head = () => <Seo title="My Page" />`}
     </pre>
 
-    <Link to="/">Back to home</Link>
+    <Link to="/developers/layout-examples">← Back to Layout Examples</Link>
   </Layout>
 )
 

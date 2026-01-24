@@ -1,17 +1,18 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/Layout"
-import Seo from "../components/seo"
+import Layout from "../../../components/Layout"
+import Seo from "../../../components/seo"
 
-const NoSidebarPage = () => (
-  <Layout showSidebar={false}>
-    <h1>No Sidebar Layout Example</h1>
+const NoHeaderFooterPage = () => (
+  <Layout showHeader={false} showFooter={false}>
+    <h1>No Header/Footer Layout Example</h1>
     
     <h2>How It Works</h2>
     <p>
-      This page demonstrates the <strong>No Sidebar</strong> layout variant. The sidebar navigation
-      is hidden, allowing the main content to expand and use the full available width.
+      This page demonstrates the <strong>No Header/Footer</strong> layout variant. The header and
+      footer are hidden, but the sidebar navigation remains visible. This gives a clean,
+      application-like interface while keeping navigation accessible.
     </p>
 
     <h3>Configuration</h3>
@@ -25,9 +26,9 @@ const NoSidebarPage = () => (
         fontSize: "0.85rem",
       }}
     >
-      {`<Layout showSidebar={false}>
+      {`<Layout showHeader={false} showFooter={false}>
   <h1>My Content</h1>
-  <p>This content spans the full width...</p>
+  <p>Navigation is via the sidebar...</p>
 </Layout>`}
     </pre>
 
@@ -49,46 +50,46 @@ const NoSidebarPage = () => (
       <tbody>
         <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
           <td style={{ padding: "0.75rem" }}>Header</td>
-          <td style={{ padding: "0.75rem" }}>✅ Yes</td>
-        </tr>
-        <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
-          <td style={{ padding: "0.75rem" }}>Sidebar</td>
           <td style={{ padding: "0.75rem" }}>❌ No</td>
         </tr>
         <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
+          <td style={{ padding: "0.75rem" }}>Sidebar</td>
+          <td style={{ padding: "0.75rem" }}>✅ Yes</td>
+        </tr>
+        <tr style={{ borderBottom: "1px solid #e5e7eb" }}>
           <td style={{ padding: "0.75rem" }}>Main Content</td>
-          <td style={{ padding: "0.75rem" }}>✅ Yes (Full Width)</td>
+          <td style={{ padding: "0.75rem" }}>✅ Yes</td>
         </tr>
         <tr>
           <td style={{ padding: "0.75rem" }}>Footer</td>
-          <td style={{ padding: "0.75rem" }}>✅ Yes</td>
+          <td style={{ padding: "0.75rem" }}>❌ No</td>
         </tr>
       </tbody>
     </table>
 
     <h2>Use Cases</h2>
     <ul>
-      <li><strong>Full-Width Content:</strong> Pages that need maximum horizontal space</li>
-      <li><strong>Landing Pages:</strong> Marketing or introduction pages without navigation clutter</li>
-      <li><strong>Detail Pages:</strong> Full-width article or resource pages</li>
-      <li><strong>Wide Layouts:</strong> Tables, charts, or wide-format content</li>
-      <li><strong>Focused Content:</strong> Pages where navigation would distract from the content</li>
+      <li><strong>Admin Panels:</strong> Application-like interfaces for administrators</li>
+      <li><strong>Dashboard Interfaces:</strong> Monitoring and analytics dashboards</li>
+      <li><strong>Internal Tools:</strong> Private application pages with sidebar navigation</li>
+      <li><strong>Settings Pages:</strong> Configuration areas where only sidebar nav is needed</li>
+      <li><strong>Focused Apps:</strong> Applications where header/footer would reduce screen space</li>
     </ul>
 
-    <h2>What Happens on Mobile?</h2>
+    <h2>When to Use This</h2>
     <p>
-      On mobile screens (less than 768px), the layout automatically switches to show the hamburger menu
-      instead of a sidebar. Users can toggle the mobile menu to access navigation without sacrificing
-      screen space.
+      This layout is perfect when you want to maximize screen real estate for content while keeping
+      navigation always accessible via the sidebar. The absence of header and footer makes it feel
+      more like a dedicated application than a website.
     </p>
 
     <h2>Comparison with Other Layouts</h2>
     <ul>
       <li>
-        <strong>No Sidebar</strong> (this page) - Header ✓ | Sidebar ✗ | Footer ✓
+        <strong>No Sidebar</strong> - Header ✓ | Sidebar ✗ | Footer ✓
       </li>
       <li>
-        <strong>No Header/Footer</strong> - Header ✗ | Sidebar ✓ | Footer ✗
+        <strong>No Header/Footer</strong> (this page) - Header ✗ | Sidebar ✓ | Footer ✗
       </li>
       <li>
         <strong>Content Only</strong> - Header ✗ | Sidebar ✗ | Footer ✗
@@ -109,14 +110,14 @@ const NoSidebarPage = () => (
         fontSize: "0.85rem",
       }}
     >
-      {`import Layout from "../components/Layout"
-import Seo from "../components/seo"
+      {`import Layout from "../../../components/Layout"
+import Seo from "../../../components/seo"
 
 export default function MyPage() {
   return (
-    <Layout showSidebar={false}>
-      <h1>Full-Width Content</h1>
-      <p>Your content here...</p>
+    <Layout showHeader={false} showFooter={false}>
+      <h1>Admin Panel</h1>
+      <p>Your admin content here...</p>
     </Layout>
   )
 }
@@ -124,10 +125,10 @@ export default function MyPage() {
 export const Head = () => <Seo title="My Page" />`}
     </pre>
 
-    <Link to="/">Back to home</Link>
+    <Link to="/developers/layout-examples">← Back to Layout Examples</Link>
   </Layout>
 )
 
-export const Head = () => <Seo title="No Sidebar" />
+export const Head = () => <Seo title="No Header/Footer" />
 
-export default NoSidebarPage
+export default NoHeaderFooterPage

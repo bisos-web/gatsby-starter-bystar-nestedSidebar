@@ -5,6 +5,28 @@ projects requiring hierarchical navigation, flexible layouts, and
 privacy-respecting features. Built with React 18, Lunr.js search, and
 accessibility in mind.
 
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/bisos-web/gatsby-starter-bystar-nestedSidebar.git
+cd gatsby-starter-bystar-nestedSidebar
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run develop
+```
+
+Your site will be running at `http://localhost:8000`
+
 ## ✨ Key Features
 
 ### 🎨 Layout & Navigation
@@ -21,6 +43,13 @@ accessibility in mind.
 - **Client-Side Full-Text Search**: Powered by Lunr.js for instant, privacy-respecting search
 - **Search Results Page**: Dedicated `/explore/search` page with integrated SearchBox component
 - **Fast Indexing**: Automatically indexes all pages from menu hierarchy
+
+### 🎞️ Embedded Content
+- **Flexible Content Embedding**: Embed external websites and services via iframes
+- **Multiple Aspect Ratios**: Support for 16:9, 4:3, 1:1, and auto aspect ratios
+- **Security Controls**: Configurable sandbox restrictions for iframe security
+- **Error Handling**: User-friendly error messages with fallback links
+- **Responsive Embedding**: Embedded content scales perfectly on all devices
 
 ### ♿ Accessibility & Standards
 - **WCAG 2.1 Compliant**: Comprehensive accessibility documentation and implementation
@@ -65,63 +94,7 @@ accessibility in mind.
 - Content-only layouts for maximum space
 - Responsive layouts for all screen sizes
 
-## 🚀 Quick Start
-
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/bisos-web/gatsby-starter-bystar-nestedSidebar.git
-cd gatsby-starter-bystar-nestedSidebar
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run develop
-```
-
-Your site will be running at `http://localhost:8000`
-
-### Creating Pages
-
-1. **Add to Menu** (`src/data/menuData.js`):
-```javascript
-{
-  label: "My New Page",
-  path: "/my-page",
-  children: [
-    {
-      label: "Child Page",
-      path: "/my-page/child",
-    }
-  ]
-}
-```
-
-2. **Create Page Component** (`src/pages/my-page.js`):
-```javascript
-import * as React from "react"
-import Layout from "../components/Layout"
-import Seo from "../components/seo"
-
-export default function MyPage() {
-  return (
-    <Layout showHeader showSidebar showFooter>
-      <h1>My New Page</h1>
-      <p>Your content here...</p>
-    </Layout>
-  )
-}
-
-export const Head = () => <Seo title="My Page" />
-```
-
-## 📁 Project Structure
+##  Project Structure
 
 ```
 gatsby-starter-nestedSidebar/
@@ -164,6 +137,18 @@ gatsby-starter-nestedSidebar/
 ├── package.json
 └── README.md
 ```
+
+## 🛠️ For Developers
+
+This starter is **self-documenting**. Rather than maintaining all developer documentation in this README, comprehensive guides and interactive examples are built directly into the website.
+
+Visit the **For Developers** section of the site to explore:
+
+- **Creating Pages** - Step-by-step guide for adding and configuring new pages, with code templates and best practices
+- **Layout Examples** - Explore different layout configurations (full-width, app-like, content-only) with working examples
+- **Embedded Services** - Comprehensive guide to embedding external content with the EmbeddedContent component
+
+This approach keeps documentation synchronized with actual implementation and provides interactive examples you can explore and learn from directly within the site.
 
 ## 🎨 Customization
 
