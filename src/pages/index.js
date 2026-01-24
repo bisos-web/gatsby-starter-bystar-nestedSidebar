@@ -22,7 +22,7 @@ const IndexPage = () => (
           />
         </div>
         <h1 className="text-5xl font-bold text-bystar-navy text-center mb-5">
-          🌳 Gatsby Starter: ByStar Nested Sidebar
+          🌳 Gatsby Starter:<br />ByStar Nested Sidebar
         </h1>
         <p className="text-xl leading-relaxed text-gray-600 mb-8 text-center">
           A professional, feature-rich Gatsby starter designed for <strong>ByStar and hierarchical websites</strong>. 

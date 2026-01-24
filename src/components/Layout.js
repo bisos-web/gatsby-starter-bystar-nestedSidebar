@@ -27,6 +27,31 @@ export default function Layout({
     setSidebarOpen(false)
   }, [location.pathname])
 
+  // Lock/unlock body scroll when sidebar opens/closes
+  React.useEffect(() => {
+    if (sidebarOpen) {
+      // Calculate scrollbar width to prevent layout shift
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+      
+      // Disable scrolling
+      document.documentElement.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden'
+      document.body.style.paddingRight = `${scrollbarWidth}px`
+    } else {
+      // Re-enable scrolling
+      document.documentElement.style.overflow = 'auto'
+      document.body.style.overflow = 'auto'
+      document.body.style.paddingRight = '0px'
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.documentElement.style.overflow = 'auto'
+      document.body.style.overflow = 'auto'
+      document.body.style.paddingRight = '0px'
+    }
+  }, [sidebarOpen])
+
   return (
     <div className="flex flex-col min-h-screen bg-slate-100">
       {/* Hamburger Menu Button */}
@@ -57,17 +82,12 @@ export default function Layout({
             {/* Sidebar - Hidden on mobile, visible on md and up */}
             {showSidebar && (
               <>
-                {/* Desktop Sidebar - Always visible */}
-                <aside className="desktop-sidebar" style={{ 
+                {/* Desktop Sidebar - Always visible on desktop, hidden on mobile */}
+                <aside className="hidden md:block desktop-sidebar bg-gray-100 border-r border-gray-300 overflow-y-auto flex-shrink-0" style={{ 
                   width: '256px',
-                  backgroundColor: '#f3f4f6',
-                  borderRight: '1px solid #d1d5db',
-                  overflowY: 'auto',
                   minHeight: '100%',
-                  flexShrink: 0,
-                  display: 'block'
                 }}>
-                  <div style={{ padding: '1rem' }}>
+                  <div className="p-4">
                     <Sidebar />
                   </div>
                 </aside>

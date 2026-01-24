@@ -95,6 +95,12 @@ npm run develop
 
 Your site will be running at `http://localhost:8000`
 
+## 📸 Homepage Screenshot
+
+![ByStar Nested Sidebar Homepage](./misc/homePage.png)
+
+*The ByStar Nested Sidebar starter home page with full navigation sidebar exposed, showing the hierarchical menu structure, core features grid, and quick start section.*
+
 ## ✨ Key Features
 
 ### 🎨 Layout & Navigation
