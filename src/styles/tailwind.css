@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile-first responsive behavior */
+
+/* Hamburger menu - show on mobile (max 768px), hide on desktop */
+@media (max-width: 768px) {
+  button.md\:hidden,
+  button[class*="md:hidden"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  aside.desktop-sidebar {
+    display: none !important;
+  }
+}
+
+/* Desktop - hide hamburger, show sidebar */
+@media (min-width: 769px) {
+  button.md\:hidden,
+  button[class*="md:hidden"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  
+  aside.desktop-sidebar {
+    display: block !important;
+    visibility: visible !important;
+  }
+}

@@ -2,38 +2,13 @@ import * as React from "react"
 
 export default function Footer() {
   return (
-    <footer style={styles.footer}>
-      <div style={styles.footerContent}>
-        <p style={styles.footerLinks}>
-          <a href="#privacy" style={styles.link}>Privacy Policy</a> | 
-          <a href="#terms" style={styles.link}>Terms of Service</a>
+    <footer className="bg-gray-800 text-white px-4 md:px-8 py-8 text-center border-t-4 border-blue-600 mt-auto">
+      <div className="max-w-6xl mx-auto">
+        <p className="m-0">
+          <a href="#privacy" className="text-blue-400 hover:text-blue-300">Privacy Policy</a> | 
+          <a href="#terms" className="text-blue-400 hover:text-blue-300 ml-2">Terms of Service</a>
         </p>
       </div>
     </footer>
   )
-}
-
-const styles = {
-  footer: {
-    backgroundColor: '#333',
-    color: '#fff',
-    padding: '2rem 1rem',
-    textAlign: 'center',
-    gridArea: 'footer',
-    borderTop: '4px solid #0066cc',
-  },
-  footerContent: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-  },
-  footerLinks: {
-    margin: '1rem 0 0 0',
-    fontSize: '0.9rem',
-  },
-  link: {
-    color: '#fff',
-    textDecoration: 'none',
-    marginLeft: '0.5rem',
-    marginRight: '0.5rem',
-  },
 }

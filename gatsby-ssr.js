@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/
  */
 
+import "./src/styles/tailwind.css"
 import "./src/styles/global.css"
 
 /**

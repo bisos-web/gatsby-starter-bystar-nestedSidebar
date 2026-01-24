@@ -2,34 +2,11 @@ import * as React from "react"
 
 export default function Header() {
   return (
-    <header style={styles.header}>
-      <div style={styles.headerContent}>
-        <h1 style={styles.title}>Your Site Title</h1>
-        <p style={styles.subtitle}>Welcome to your Gatsby site</p>
+    <header className="bg-gray-800 text-white px-4 md:px-8 py-4 md:py-8 border-b-4 border-blue-600">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-2xl md:text-4xl m-0 font-bold">Your Site Title</h1>
+        <p className="text-sm md:text-base m-0 mt-2 opacity-90">Welcome to your Gatsby site</p>
       </div>
     </header>
   )
-}
-
-const styles = {
-  header: {
-    backgroundColor: '#333',
-    color: '#fff',
-    padding: '2rem 1rem',
-    gridArea: 'header',
-    borderBottom: '4px solid #0066cc',
-  },
-  headerContent: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-  },
-  title: {
-    margin: 0,
-    fontSize: '2rem',
-  },
-  subtitle: {
-    margin: '0.5rem 0 0 0',
-    fontSize: '0.9rem',
-    opacity: 0.9,
-  },
 }

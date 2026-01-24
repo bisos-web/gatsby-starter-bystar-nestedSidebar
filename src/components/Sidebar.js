@@ -49,31 +49,25 @@ export default function Sidebar() {
   const expandedPaths = getExpandedPaths(currentPath, menuData)
   
   return (
-    <aside style={styles.sidebar}>
-      <nav style={styles.nav}>
-        <div style={styles.menuContainer}>
-          {menuData.map((item) => (
-            <MenuItem
-              key={item.path}
-              item={item}
-              level={0}
-              currentPath={currentPath}
-              expandedPaths={expandedPaths}
-            />
-          ))}
-        </div>
-      </nav>
-    </aside>
+    <nav style={styles.nav}>
+      <div style={styles.menuContainer}>
+        {menuData.map((item) => (
+          <MenuItem
+            key={item.path}
+            item={item}
+            level={0}
+            currentPath={currentPath}
+            expandedPaths={expandedPaths}
+          />
+        ))}
+      </div>
+    </nav>
   )
 }
 
 const styles = {
   sidebar: {
-    backgroundColor: '#f0f0f0',
-    padding: '1rem',
-    gridArea: 'sidebar',
-    borderRight: '1px solid #ddd',
-    minHeight: '100%',
+    width: '100%',
   },
   nav: {
     width: '100%',
