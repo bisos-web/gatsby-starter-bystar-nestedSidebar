@@ -259,8 +259,11 @@ Cmnd -- No Results
 #+end_example
         #+end_org """)
 
+
+        #  f"""gatsby clean && npm install && gatsby build""",
+        #
         if b.subProc.WOpW(invedBy=self, log=1, cd=thisExecDirBase).bash(
-                f"""gatsby clean && npm install && gatsby build""",
+                f"""npm install && gatsby build""",
         ).isProblematic():  return(b_io.eh.badOutcome(cmndOutcome))
 
         return cmndOutcome
