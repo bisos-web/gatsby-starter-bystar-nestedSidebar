@@ -38,11 +38,10 @@
 """ #+begin_org
 * *[[elisp:(org-cycle)][| Particulars-csInfo |]]*
 #+end_org """
-import typing
-csInfo: typing.Dict[str, typing.Any] = { 'moduleName': ['facter-active'], }
-csInfo['version'] = '202409222627'
+if 'csInfo' not in globals(): import typing ; csInfo: typing.Dict[str, typing.Any] = { 'moduleName': ['loadAs'], }
+csInfo['version'] = '202609040458'
 csInfo['status']  = 'inUse'
-csInfo['panel'] = 'facter-active-Panel.org'
+csInfo['panel'] = 'gatsbyBxSidebar-assemble-Panel.org'
 csInfo['groupingType'] = 'IcmGroupingType-pkged'
 csInfo['cmndParts'] = 'IcmCmndParts[common] IcmCmndParts[param]'
 ####+END:
@@ -87,6 +86,10 @@ import collections
 from bisos.capability import cba_assemble
 
 cba_assemble.cbaAssemble.assemblerType = "roPerfCs+DataBpos"
+
+import pathlib
+thisExecDirBase = str(pathlib.Path(__file__).resolve().parent)
+
 
 """ #+begin_org
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  CsFrmWrk   [[elisp:(outline-show-subtree+toggle)][||]] ~csuList emacs-list Specifications~  [[elisp:(blee:org:code-block/above-run)][ /Eval Below/ ]] [[elisp:(org-cycle)][| ]]
@@ -256,7 +259,7 @@ Cmnd -- No Results
 #+end_example
         #+end_org """)
 
-        if b.subProc.WOpW(invedBy=self, log=1).bash(
+        if b.subProc.WOpW(invedBy=self, log=1, cd=thisExecDirBase).bash(
                 f"""gatsby clean && npm install && gatsby build""",
         ).isProblematic():  return(b_io.eh.badOutcome(cmndOutcome))
 
@@ -299,7 +302,7 @@ Cmnd -- No Results
 #+end_example
         #+end_org """)
 
-        if b.subProc.WOpW(invedBy=self, log=1).bash(
+        if b.subProc.WOpW(invedBy=self, log=1, cd=thisExecDirBase).bash(
                 f"""csPlayerUi-here-dns.pcs -i dnsCap_update""",
         ).isProblematic():  return(b_io.eh.badOutcome(cmndOutcome))
 
@@ -340,11 +343,11 @@ Cmnd -- No Results
 #+end_example
         #+end_org """)
 
-        if b.subProc.WOpW(invedBy=self, log=1).bash(
+        if b.subProc.WOpW(invedBy=self, log=1, cd=thisExecDirBase).bash(
                 f"""gatsbyBxSidebar-wvd.pcs -i configFileUpdate --cls="configFile_nginxVd" --runAs=root""",
         ).isProblematic():  return(b_io.eh.badOutcome(cmndOutcome))
 
-        if b.subProc.WOpW(invedBy=self, log=1).bash(
+        if b.subProc.WOpW(invedBy=self, log=1, cd=thisExecDirBase).bash(
                 f"""gatsbyBxSidebar-wvd.pcs -i webVd_enable""",
         ).isProblematic():  return(b_io.eh.badOutcome(cmndOutcome))
 
