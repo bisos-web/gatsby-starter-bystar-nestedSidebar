@@ -114,6 +114,7 @@ thisExecDirBase = str(pathlib.Path(__file__).resolve().parent)
 from bisos.b.cs import ro
 from bisos.csPlayer import bleep
 from bisos.banna import bannaPortNu
+from bisos.webCap import nodeEnv
 
 
 csuList = [ 'bisos.b.cs.ro', 'bisos.csPlayer.bleep', 'bisos.banna.bannaPortNu', ]
@@ -263,7 +264,7 @@ Cmnd -- No Results
         #  f"""gatsby clean && npm install && gatsby build""",
         #
         if b.subProc.WOpW(invedBy=self, log=1, cd=thisExecDirBase).bash(
-                f"""npm install && gatsby build""",
+                nodeEnv.withNvmBash(f"""npm install && gatsby build"""),  # nvm's node and its gatsby-cli
         ).isProblematic():  return(b_io.eh.badOutcome(cmndOutcome))
 
         return cmndOutcome
